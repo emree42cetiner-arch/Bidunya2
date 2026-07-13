@@ -19,19 +19,31 @@ npm run dev
 
 ## Cloudflare'e Yayinlama
 
-Proje `@opennextjs/cloudflare` adaptoru ile Cloudflare Workers uzerinde calisacak
+Proje `@opennextjs/cloudflare` adaptoru ile Cloudflare Pages/Workers ortaminda calisacak
 sekilde yapilandirilmistir (statik sayfalar + `/arama` gibi dinamik sayfalar dahil).
+
+### Cloudflare Pages ayarlari
+
+Cloudflare Pages panelinde su ayarlari yapin:
+
+- Build command: `npm run pages:build`
+- Build output directory: `.open-next/assets`
+- Root directory: proje kok dizini
+- Node.js version: `22` (veya uyumlu bir surum)
+
+Yerelde dogrulama:
 
 ```bash
 npm install
-npx wrangler login        # ilk seferde Cloudflare hesabina baglanmak icin
-npm run deploy             # build alir ve Cloudflare'e yayinlar
+npm run pages:build
+npm run pages:preview
 ```
 
-Sadece yerelde denemek icin:
+Cloudflare hesabina baglanip yayinlamak icin:
 
 ```bash
-npm run preview
+npx wrangler login
+npm run deploy
 ```
 
 ### Notlar
