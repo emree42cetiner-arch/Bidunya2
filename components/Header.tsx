@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, useState } from "react";
@@ -50,9 +51,16 @@ export function Header() {
       <header className="sticky top-0 z-40 border-b border-white/60 bg-white/90 shadow-sm backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
           <Link href="/" className="group flex shrink-0 items-center gap-3 text-ink">
-            <span className="grid h-11 w-11 place-items-center rounded-2xl bg-[linear-gradient(135deg,#12183f,#2d2f7f)] text-sm font-black text-white shadow-soft ring-1 ring-white/60">
-              BR
-            </span>
+            <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl bg-[linear-gradient(135deg,#12183f,#2d2f7f)] shadow-soft ring-1 ring-white/60">
+              <Image
+                src={siteConfig.logoSrc}
+                alt={siteConfig.logoAlt}
+                width={44}
+                height={44}
+                className="h-full w-full object-contain"
+                priority
+              />
+            </div>
             <span>
               <span className="block text-xl font-semibold tracking-tight">{siteConfig.name}</span>
               <span className="block text-[11px] font-bold uppercase tracking-[0.2em] text-skybrand">

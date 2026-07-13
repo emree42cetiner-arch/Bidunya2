@@ -1,6 +1,8 @@
 export const siteConfig = {
   name: "BİDÜNYA REKLAM",
   legalName: "BİDÜNYA REKLAM",
+  logoSrc: "/images/logo-kare-1200.webp",
+  logoAlt: "BİDÜNYA Reklam logosu",
   description:
     "Plaket, madalya, ödül kupası, yaka isimliği, rozet ve özel tasarım reklam ürünleri için kurumsal katalog ve hızlı teklif merkezi.",
   url: "https://www.bidünyareklam.com",
