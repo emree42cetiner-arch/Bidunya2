@@ -5,7 +5,6 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { StickyContactButtons } from "@/components/StickyContactButtons";
 import { siteConfig } from "@/data/site";
-import { absoluteUrl } from "@/lib/utils";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -21,20 +20,11 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} | Ödül, Plaket, Madalya ve Kupa Kataloğu`,
     description: siteConfig.description,
     url: siteConfig.url,
-    images: [
-      {
-        url: absoluteUrl("/images/og-default.png"),
-        width: 1200,
-        height: 630,
-        alt: `${siteConfig.name} ürün kataloğu`,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} | Ödül Kataloğu`,
     description: siteConfig.description,
-    images: [absoluteUrl("/images/og-default.png")],
   },
 };
 
@@ -43,7 +33,6 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: siteConfig.legalName,
   url: siteConfig.url,
-  image: absoluteUrl("/images/og-default.png"),
   telephone: siteConfig.phone,
   email: siteConfig.email,
   address: {

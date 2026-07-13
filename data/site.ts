@@ -4,7 +4,6 @@ export const siteConfig = {
   description:
     "Plaket, madalya, ödül kupası, yaka isimliği, rozet ve özel tasarım reklam ürünleri için kurumsal katalog ve hızlı teklif merkezi.",
   url: "https://www.bidünyareklam.com",
-  logo: "/images/logo.png",
   phone: "0538 983 14 90",
   phoneHref: "tel:+905389831490",
   whatsapp: "0538 983 14 90",
