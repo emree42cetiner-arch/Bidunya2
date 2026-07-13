@@ -197,45 +197,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-ink py-20 text-white sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-14 max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-champagne">Sizin için üretiyoruz</p>
-            <h2 className="mt-4 font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-              Markanıza ve etkinliğinize göre şekillenen bir katalog
-            </h2>
-          </div>
-          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/50">Özelleştirme</p>
-              <div className="mt-5 flex flex-wrap gap-2.5">
-                {customOptions.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full bg-white/8 px-4 py-2 text-sm font-medium text-white/90 ring-1 ring-inset ring-white/10"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/50">Kullanım alanları</p>
-              <div className="mt-5 flex flex-wrap gap-2.5">
-                {useCases.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full bg-white/8 px-4 py-2 text-sm font-medium text-white/90 ring-1 ring-inset ring-white/10"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <CTASection />
     </>
   );
